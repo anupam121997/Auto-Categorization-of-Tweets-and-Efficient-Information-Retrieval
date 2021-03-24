@@ -167,7 +167,7 @@ history = model.fit(x = X_train, y = y_train, epochs = 25, validation_data = (X_
 
 model.save('LSTM.h5')
 
-model.save_weights('malenoma_weights.h5')
+model.save_weights('LSTM_weights.h5')
 
 
 # In[21]:
