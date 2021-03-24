@@ -165,7 +165,7 @@ model.compile(loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
 
 history = model.fit(x = X_train, y = y_train, epochs = 25, validation_data = (X_test, y_test))
 
-model.save('malenoma.h5')
+model.save('LSTM.h5')
 
 model.save_weights('malenoma_weights.h5')
 
