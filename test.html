@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	*{
+	margin:0;
+	padding:0;
+	}
+	#maindiv{
+	width:1000px;
+	height:800px;
+	background:#E5E7E9;
+	margin:0 auto;
+	}
+	#header{
+	width:1000px;
+	height:100px;
+	background:pink;
+	}
+	#content{
+	width:1000px;
+	height:600px;
+	background:#E5E7E9;
+	}
+	#content input[type=="text"]{
+	width:1000px;
+	height:600px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div id="maindiv">
+	
+		<div id="header">
+			<h1 style="margin-left:10px; font-family:Copperplate Gothic Bold; color:#a65959"> Auto-Categorization of Tweets and Efficient Information Retrieval</h1>
+			<h5 style="margin-left:400px; font-size:20px; color:green">Group 30</h5>
+		</div>
+		
+		<div id="content">
+			<form name="passdata",action="http://127.0.0.1:5000/", method="POST">
+				
+				<input type="text" name="query" placeholder="" value="{{text}}" style="width:620px; margin : 10px">
+				<!-- <button type="submit" name="micButton" value="mic">Start mic</button> -->
+				<select name="models" style="margin : 10px">
+					<option name="tfidf" value="tfidf">TF-IDF</option>
+					<option name= "cosine" value="cosine">Cosine</option>
+					<option name="euclidean" value="euclidean">Euclidean</option>
+					<option name="jaccard" value="jaccard">Jaccard</option>
+					<option name="bm25" value="bm25">BM25</option>
+				</select>
+				<button type="submit" style="width:120px;">Search</button>	
+			</form>
+			<form action="/ak", method="POST">
+				<select name="models" style="margin : 10px">
+					<option name="tfidf" value="tfidf">TF-IDF</option>
+					<option name= "cosine" value="cosine">Cosine</option>
+					<option name="euclidean" value="euclidean">Euclidean</option>
+					<option name="jaccard" value="jaccard">Jaccard</option>
+					<option name="bm25" value="bm25">BM25</option>
+				</select>
+				<button type="submit" >Start mic</button>	
+				<!-- <h5>{{text}}</h5> -->
+			 </form> 
+			 <h5>{{micSearch}}</h5>
+			<p  id="txtarea" style="width:800px; margin:10px; font-size:20px" > 
+				
+				Result :
+				<h5 style = "margin:10px; font-size:15px">Tweet Belongs to: {{tweet_class}}</h5>
+				<h5 style=" margin:10px; font-size:15px">1. {{a}}</h5>
+				<h5 style=" margin:10px; font-size:15px">2. {{b}}</h5>
+				<h5 style=" margin:10px; font-size:15px">3. {{c}}</h5>
+				<h5 style=" margin:10px; font-size:15px">4. {{d}}</h5>
+				<h5 style=" margin:10px; font-size:15px">5. {{e}}</h5>
+				<h5 style=" margin:10px; font-size:15px">6. {{f}}</h5>
+				<h5 style=" margin:10px; font-size:15px">7. {{g1}}</h5>
+				<h5 style=" margin:10px; font-size:15px">8. {{h}}</h5>
+				<h5 style=" margin:10px; font-size:15px">9. {{i}}</h5>
+				<h5 style=" margin:10px; font-size:15px">10. {{j}}</h5>
+		
+			</p>
+			
+		</div>
+	</div>
+</body>
+</html>
+
