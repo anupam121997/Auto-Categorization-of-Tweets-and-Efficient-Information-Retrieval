@@ -15,3 +15,34 @@ On the above-generated files, we have constructed our final parts which contain 
 2.	speechtotext.py:  this file is used for converting the speech query into a text query so that our “dummy.py” will work efficiently.
 3.	dummy.py: this python file contains the code for the backend. So, all the similarity measure work is done on this file.
 4.	Test.html: this file contains the UI part.
+
+To run the code, the following steps are to be followed:
+1.	First, ensure that the following files are present to you:
+    •	BM25_education.csv
+    •	BM25_entertainment.csv
+    •	BM25_politics.csv
+    •	BM25_sports.csv
+    •	BM25_technology.csv
+    •	docid_tokens_education.txt
+    •	docid_tokens_entertainment.txt
+    •	docid_tokens_politics.txt
+    •	docid_tokens_sports.txt
+    •	docid_tokens_technology.txt
+    •	document_id_name_decionary_education.txt
+    •	document_id_name_decionary_entertainment.txt
+    •	document_id_name_decionary_politics.txt
+    •	document_id_name_decionary_sports.txt
+    •	document_id_name_decionary_technology.txt
+    •	svm_model.sav
+    •	tf_idf_vector_education1.sav
+    •	tf_idf_vector_entertainment1.sav
+    •	tf_idf_vector_politics1.sav
+    •	tf_idf_vector_sports1.sav
+    •	tf_idf_vector_technology1.sav
+    •	tweets_cleaned_education.csv
+    •	tweets_cleaned_entertainment.csv
+    •	tweets_cleaned_politics.csv
+    •	tweets_cleaned_sports.csv
+    •	tweets_cleaned_technology.csv
+
+2.	After this run the app.py which will generate a link: http://127.0.0.1:5000/. Then copy this link and paste it into the browser to enter the query to fetch the results.
